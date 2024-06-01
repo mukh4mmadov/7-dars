@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap);
+
+      input:focus {
+        outline: none;
+      }
+      body {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      li {
+        border-bottom: 1px solid #e3e4f1;
+      }
+
+      .day {
+        background-image: url("./images/Bitmap.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: #fafafa;
+      }
+
+      .night {
+        background-image: url("./images/Bitmapnight.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: #171823;
+
+        .form-wrapper {
+          background-color: #25273d;
+        }
+
+        input {
+          background-color: #25273d;
+        }
+
+        li {
+          background-color: #25273d;
+        }
+      }
+    </style>
+  </head>
+  <body class="day">
+    <div class="container ml-auto mr-auto max-w-[640px] mt-[70px]">
+      <div class="flex justify-between">
+        <h1 class="font-bold text-4xl text-white tracking-[15px] solid">
+          TODO
+        </h1>
+        <i
+          id="moon-logo"
+          class="fa-solid fa-moon text-[#fff] text-[25px] my-[11px]"
+        ></i>
+      </div>
+      <div class="form-wrapper py-5 px-6 bg-white rounded mt-10 mb-6">
+        <form id="form" class="flex items-center gap-6">
+          <i
+            id="checkbox"
+            class="fa-regular fa-circle text-[20px] opacity-50"
+          ></i>
+          <input
+            id="todo"
+            class="p-0 border-0 text-[18px] leading-[18px] tracking-[-0.25px]"
+            type="text"
+            placeholder="Create a new todo…"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+      <div>
+        <ul id="ul">
+          <!-- <li
+            class="gap-6 py-5 px-6 bg-white rounded flex justify-between items-center"
+          >
+            <div class="flex items-center">
+              <i
+                class="items-logo fa-regular fa-circle text-[20px] opacity-50"
+              ></i>
+              <span id="text"></span>
+            </div>
+            <i id="close" class="fa-solid fa-xmark"></i>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- JAVASCRIPT LINK -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

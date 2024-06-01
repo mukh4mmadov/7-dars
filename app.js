@@ -1,0 +1,1 @@
+// yozib qoyaman
